@@ -11,12 +11,12 @@ function download_elixir() {
 
     output_section "Fetching Elixir ${elixir_version} for OTP ${otp_version} from ${download_url}"
 
-    curl -s ${download_url} -o $(elixir_cache_path)/$(elixir_download_file)
+    curl -sSfL ${download_url} -o $(elixir_cache_path)/$(elixir_download_file)
 
     if [ $? -ne 0 ]; then
       output_section "Falling back to fetching Elixir ${elixir_version} for generic OTP version"
       local download_url="https://builds.hex.pm/builds/elixir/${elixir_version}.zip"
-      curl -s ${download_url} -o $(elixir_cache_path)/$(elixir_download_file) || exit 1
+      curl -sSfL ${download_url} -o $(elixir_cache_path)/$(elixir_download_file) || exit 1
     fi
   else
     output_section "Using cached Elixir ${elixir_version}"
