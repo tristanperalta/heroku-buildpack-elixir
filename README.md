@@ -18,6 +18,8 @@
 * The full list of prebuilt packages can be found here: 
   * gigalixir-20 or heroku-20 stacks: https://builds.hex.pm/builds/otp/ubuntu-20.04/builds.txt
   * heroku-22 stacks: https://builds.hex.pm/builds/otp/ubuntu-22.04/builds.txt
+  * heroku-24 stacks: https://builds.hex.pm/builds/otp/ubuntu-24.04/builds.txt
+  * heroku-26 stacks: https://builds.hex.pm/builds/otp/ubuntu-26.04/builds.txt
   * All other stacks: https://github.com/HashNuke/heroku-buildpack-elixir-otp-builds/blob/master/otp-versions
 
 **Elixir**

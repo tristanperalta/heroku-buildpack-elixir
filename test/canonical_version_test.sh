@@ -20,3 +20,19 @@ testExactErlangVersionMajorOnly() {
 testExactErlangVersionMajorMinorOnly() {
   assertEquals 0 $(exact_erlang_version_available "21.0" "$VERSIONS")
 }
+
+testHeroku24ErlangBuildsUrl() {
+  assertEquals "https://builds.hex.pm/builds/otp/ubuntu-24.04" "$(STACK=heroku-24; erlang_builds_url)"
+}
+
+testHeroku24ExactErlangVersionAvailable() {
+  assertEquals 0 $(STACK=heroku-24; exact_erlang_version_available "27.3.4.2" "$(fetch_erlang_versions)")
+}
+
+testHeroku26ErlangBuildsUrl() {
+  assertEquals "https://builds.hex.pm/builds/otp/ubuntu-26.04" "$(STACK=heroku-26; erlang_builds_url)"
+}
+
+testHeroku26ExactErlangVersionAvailable() {
+  assertEquals 0 $(STACK=heroku-26; exact_erlang_version_available "27.3.4.2" "$(fetch_erlang_versions)")
+}
